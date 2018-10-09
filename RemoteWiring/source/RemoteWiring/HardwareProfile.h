@@ -103,11 +103,11 @@ public:
             auto vector = ref new Platform::Collections::Vector<uint8_t>();
             if( _is_valid )
             {
-                for( size_t pin = _analog_offset; pin < _total_pin_count; ++pin )
+                for( size_t pin = _analog_offset; pin < (unsigned)_total_pin_count; ++pin )
                 {
                     if( isAnalogSupported( pin ) )
                     {
-                        vector->Append( pin );
+                        vector->Append( (uint8_t)pin );
                     }
                 }
             }
@@ -122,11 +122,11 @@ public:
             auto vector = ref new Platform::Collections::Vector<uint8_t>();
             if( _is_valid )
             {
-                for( size_t pin = 0; pin < _total_pin_count; ++pin )
+                for( size_t pin = 0; pin < (unsigned)_total_pin_count; ++pin )
                 {
                     if( isDigitalOutputSupported( pin ) )
                     {
-                        vector->Append( pin );
+                        vector->Append((uint8_t)pin );
                     }
                 }
             }
@@ -141,11 +141,11 @@ public:
             auto vector = ref new Platform::Collections::Vector<uint8_t>();
             if( _is_valid )
             {
-                for( size_t pin = 0; pin < _total_pin_count; ++pin )
+                for( size_t pin = 0; pin < (unsigned)_total_pin_count; ++pin )
                 {
                     if( getPinCapabilitiesBitmask( pin ) == 0 )
                     {
-                        vector->Append( pin );
+                        vector->Append((uint8_t)pin );
                     }
                 }
             }
@@ -160,11 +160,11 @@ public:
             auto vector = ref new Platform::Collections::Vector<uint8_t>();
             if( _is_valid )
             {
-                for( size_t pin = 0; pin < _total_pin_count; ++pin )
+                for( size_t pin = 0; pin < (unsigned)_total_pin_count; ++pin )
                 {
                     if( isI2cSupported( pin ) )
                     {
-                        vector->Append( pin );
+                        vector->Append((uint8_t)pin );
                     }
                 }
             }
@@ -179,11 +179,11 @@ public:
             auto vector = ref new Platform::Collections::Vector<uint8_t>();
             if( _is_valid )
             {
-                for( size_t pin = 0; pin < _total_pin_count; ++pin )
+                for( size_t pin = 0; pin < (unsigned)_total_pin_count; ++pin )
                 {
                     if( isPwmSupported( pin ) )
                     {
-                        vector->Append( pin );
+                        vector->Append((uint8_t)pin );
                     }
                 }
             }
@@ -198,11 +198,11 @@ public:
             auto vector = ref new Platform::Collections::Vector<uint8_t>();
             if( _is_valid )
             {
-                for( size_t pin = 0; pin < _total_pin_count; ++pin )
+                for( size_t pin = 0; pin < (unsigned)_total_pin_count; ++pin )
                 {
                     if( isServoSupported( pin ) )
                     {
-                        vector->Append( pin );
+                        vector->Append((uint8_t)pin );
                     }
                 }
             }

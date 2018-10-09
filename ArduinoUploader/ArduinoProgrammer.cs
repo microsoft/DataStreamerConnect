@@ -56,7 +56,6 @@ namespace UploaderComponent
         internal async Task ProgramInternal(MemoryBlock memoryBlockContents)
         {
             Debug.WriteLine("ProgramInternal");
-            bool good = true;
             if (!arduino.IsConnected)
             {
                 Debug.WriteLine("Arduino is not connected????");
