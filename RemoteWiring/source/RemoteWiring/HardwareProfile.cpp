@@ -108,7 +108,7 @@ HardwareProfile::getPinCapabilitiesBitmask(
     size_t pin_
     )
 {
-    if( !_is_valid || _pinCapabilities == nullptr || pin_ >= _total_pin_count )
+    if( !_is_valid || _pinCapabilities == nullptr || pin_ >= (unsigned)_total_pin_count )
     {
         return 0;
     }

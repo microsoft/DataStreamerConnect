@@ -397,26 +397,40 @@ BleSerial::connectToDeviceAsync (
 ) {
     _device_name = device_->Name;  // Update name in case device was specified directly
     return Concurrency::create_task(Windows::Devices::Bluetooth::BluetoothLEDevice::FromIdAsync(device_->Id))
-    .then([this](Windows::Devices::Bluetooth::BluetoothLEDevice ^gatt_device_) {
-        if( gatt_device_ == nullptr )
-        {
-            throw ref new Platform::Exception( E_UNEXPECTED, ref new Platform::String( L"Unable to initialize the device. BluetoothLEDevice::FromIdAsync returned null." ) );
-        }
+		.then([this](Windows::Devices::Bluetooth::BluetoothLEDevice ^gatt_device_) {
+		if (gatt_device_ == nullptr)
+		{
+			throw ref new Platform::Exception(E_UNEXPECTED, ref new Platform::String(L"Unable to initialize the device. BluetoothLEDevice::FromIdAsync returned null."));
+		}
 
-        // Store parameter as a member to ensure the duration of object allocation
-        _gatt_device = gatt_device_;
+		// Store parameter as a member to ensure the duration of object allocation
+		_gatt_device = gatt_device_;
 
-        // Enable TX
-        _tx = ref new DataWriter();
-        _gatt_service = _gatt_device->GetGattService(BLE_SERVICE_UUID);
-        _gatt_tx_characteristic = _gatt_service->GetCharacteristics(BLE_SERIAL_TX_CHARACTERISTIC_UUID)->GetAt(0);
+		// Create a task to handle the BLE TX & RX setup as async
+		auto _gatt_task = create_task(_gatt_device->GetGattServicesForUuidAsync(BLE_SERVICE_UUID));
 
-        // Enable RX
-        _gatt_rx_characteristic = _gatt_service->GetCharacteristics(BLE_SERIAL_RX_CHARACTERISTIC_UUID)->GetAt(0);
-        _gatt_rx_characteristic->ValueChanged += ref new Windows::Foundation::TypedEventHandler<GattCharacteristic ^, GattValueChangedEventArgs ^>(this, &BleSerial::rxCallback);
-        _gatt_rx_characteristic->WriteClientCharacteristicConfigurationDescriptorAsync(GattClientCharacteristicConfigurationDescriptorValue::Notify);
+		// Enable TX
+		_gatt_task.then([this](GattDeviceServicesResult^ _gatt_service_result)
+		{
+			_tx = ref new DataWriter();
+			// TODO: Need to implement the communication status check properly - Currently assumes that it just works
+			_gatt_service = _gatt_service_result->Services->GetAt(0);
+		}).then([this]()
+		{
+			auto _gatt_characterist_task = create_task(_gatt_service->GetCharacteristicsForUuidAsync(BLE_SERIAL_TX_CHARACTERISTIC_UUID));
 
-        // Set connection ready flag and fire connection established event
+			_gatt_characterist_task.then([this](GattCharacteristicsResult^ _gatt_characteristic_result)
+			{
+				//// Enable RX
+				// TODO: Need to implement the communication status check properly - Currently assumes that it just works
+				_gatt_rx_characteristic = _gatt_characteristic_result->Characteristics->GetAt(0);
+				_gatt_rx_characteristic->ValueChanged += ref new Windows::Foundation::TypedEventHandler<GattCharacteristic ^, GattValueChangedEventArgs ^>(this, &BleSerial::rxCallback);
+				_gatt_rx_characteristic->WriteClientCharacteristicConfigurationDescriptorAsync(GattClientCharacteristicConfigurationDescriptorValue::Notify);
+			});
+
+		});
+
+		// Set connection ready flag and fire connection established event
         _connection_ready = true;
         ConnectionEstablished();
     });

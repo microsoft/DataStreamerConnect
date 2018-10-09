@@ -42,6 +42,7 @@ Windows::Foundation::IAsyncOperation<bool>^ ArduinoFirmataProvider::InitializeAs
         {
             _Arduino = arduinoTask.get();
         }
+#pragma warning (suppress: 4101) // To make debugging easier we're leaving ex declared but suppressing the warning
         catch (const std::exception& ex)
         {
             OutputDebugString(L"_Arduino->GetArduinoConnectionAsync(); failed");
@@ -68,6 +69,7 @@ Windows::Foundation::IAsyncOperation<bool>^ ArduinoFirmataProvider::InitializeAs
                     _initialized = true;
                 }
             }
+#pragma warning (suppress: 4101) // To make debugging easier we're leaving ex declared but suppressing the warning
             catch (const std::exception& ex)
             {
                 OutputDebugString(L"_Arduino->GetPinConfigurationAsync(); failed");
