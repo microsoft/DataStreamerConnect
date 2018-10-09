@@ -1,0 +1,66 @@
+CACHE MANIFEST
+
+CACHE:
+/./semantic.js
+/./main.js
+/./pxtapp.js
+/./typescript.js
+/./marked/marked.min.js
+/./highlight.js/highlight.pack.js
+/./jquery.js
+/./pxtlib.js
+/./pxtcompiler.js
+/./pxtblockly.js
+/./pxtwinrt.js
+/./pxteditor.js
+/./pxtsim.js
+/./pxtembed.js
+/./pxtworker.js
+/./pxtweb.js
+/./blockly.css
+/./semantic.css
+/./rtlsemantic.css
+
+
+
+
+
+# blockly
+/./blockly/media/sprites.png
+/./blockly/media/click.mp3
+/./blockly/media/disconnect.wav
+/./blockly/media/delete.mp3
+
+# monaco; keep in sync with webapp/public/index.html
+/./vs/loader.js
+/./vs/base/worker/workerMain.js
+/./vs/basic-languages/src/bat.js
+/./vs/basic-languages/src/cpp.js
+/./vs/editor/editor.main.css
+/./vs/editor/editor.main.js
+/./vs/editor/editor.main.nls.js
+/./vs/language/json/jsonMode.js
+/./vs/language/json/jsonWorker.js
+/./vs/language/typescript/lib/typescriptServices.js
+/./vs/language/typescript/src/mode.js
+/./vs/language/typescript/src/worker.js
+
+# charts
+/./smoothie/smoothie_compressed.js
+/./images/Bars_black.gif
+
+# ai
+https://az416426.vo.msecnd.net/scripts/a/ai.0.js
+
+/./worker.js
+/./monacoworker.js
+
+# ver Thu Aug 23 2018 14:32:29 GMT-0700 (Pacific Daylight Time)
+
+# target
+/./docs\static\hero.png
+
+/./target.js
+  
+NETWORK:
+*

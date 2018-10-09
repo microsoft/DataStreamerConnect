@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Uap.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Uap.props')" />
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|AnyCPU">
+      <Configuration>Debug</Configuration>
+      <Platform>AnyCPU</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|ARM">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x86">
+      <Configuration>Debug</Configuration>
+      <Platform>x86</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|AnyCPU">
+      <Configuration>Release</Configuration>
+      <Platform>AnyCPU</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM">
+      <Configuration>Release</Configuration>
+      <Platform>ARM</Platform>
+      <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+      <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x86">
+      <Configuration>Release</Configuration>
+      <Platform>x86</Platform>
+      <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>e2c5f81c-3114-4fa1-9d49-788d0a4954ab</ProjectGuid>
+    <TypeScriptToolsVersion>2.8</TypeScriptToolsVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup Condition="'$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '15.0'">
+    <VisualStudioVersion>15.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\$(WMSJSProjectDirectory)\Microsoft.VisualStudio.$(WMSJSProject).Default.props" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\$(WMSJSProjectDirectory)\Microsoft.VisualStudio.$(WMSJSProject).props" />
+  <PropertyGroup>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetPlatformVersion>10.0.17134.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.15063.0</TargetPlatformMinVersion>
+    <MinimumVisualStudioVersion>$(VersionNumberMajor).$(VersionNumberMinor)</MinimumVisualStudioVersion>
+    <DefaultLanguage>en</DefaultLanguage>
+    <PackageCertificateKeyFile>DataStreamerConnect_TemporaryKey.pfx</PackageCertificateKeyFile>
+    <GenerateAppInstallerFile>False</GenerateAppInstallerFile>
+    <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
+    <AppxBundle>Always</AppxBundle>
+    <AppxBundlePlatforms>x86|x64</AppxBundlePlatforms>
+    <PackageCertificateThumbprint>D6841AB8AD296DB53675C543757A223F399442DE</PackageCertificateThumbprint>
+    <AppInstallerUpdateFrequency>1</AppInstallerUpdateFrequency>
+    <AppInstallerCheckForUpdateFrequency>OnApplicationRun</AppInstallerCheckForUpdateFrequency>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppxManifest Include="package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+    <Content Include="AppService\appServiceHost.js" />
+    <Content Include="AppService\createAppServiceTask.js" />
+    <Content Include="blockly.css" />
+    <Content Include="blockly\blockly_compressed.js" />
+    <Content Include="blockly\blocks_compressed.js" />
+    <Content Include="blockly\media\1x1.gif" />
+    <Content Include="blockly\media\add.svg" />
+    <Content Include="blockly\media\click.mp3" />
+    <Content Include="blockly\media\click.ogg" />
+    <Content Include="blockly\media\click.wav" />
+    <Content Include="blockly\media\c_arrow.svg" />
+    <Content Include="blockly\media\delete.mp3" />
+    <Content Include="blockly\media\delete.ogg" />
+    <Content Include="blockly\media\delete.wav" />
+    <Content Include="blockly\media\disconnect.mp3" />
+    <Content Include="blockly\media\disconnect.ogg" />
+    <Content Include="blockly\media\disconnect.wav" />
+    <Content Include="blockly\media\dropdown-arrow-dark.svg" />
+    <Content Include="blockly\media\dropdown-arrow.svg" />
+    <Content Include="blockly\media\handclosed.cur" />
+    <Content Include="blockly\media\handdelete.cur" />
+    <Content Include="blockly\media\handopen.cur" />
+    <Content Include="blockly\media\quote0.svg" />
+    <Content Include="blockly\media\quote1.svg" />
+    <Content Include="blockly\media\remove.svg" />
+    <Content Include="blockly\media\sprites.png" />
+    <Content Include="blockly\media\sprites.svg" />
+    <Content Include="blockly\msg\json\en.json" />
+    <Content Include="blockly\msg\js\en.js" />
+    <Content Include="bluebird.min.js" />
+    <Content Include="codeembed.html" />
+    <Content Include="controller.html" />
+    <Content Include="default.rd.xml" />
+    <Content Include="docs.html" />
+    <Content Include="docs\about.html" />
+    <Content Include="docs\about.md" />
+    <Content Include="docs\beta-ref.json" />
+    <Content Include="docs\docs.html" />
+    <Content Include="docs\docs.md" />
+    <Content Include="docs\examples.html" />
+    <Content Include="docs\examples.md" />
+    <Content Include="docs\examples\square.html" />
+    <Content Include="docs\examples\square.md" />
+    <Content Include="docs\examples\square2.html" />
+    <Content Include="docs\examples\square2.md" />
+    <Content Include="docs\index-ref.json" />
+    <Content Include="docs\static\avatar.svg" />
+    <Content Include="docs\static\hero.png" />
+    <Content Include="docs\static\loader.svg" />
+    <Content Include="docs\static\logo.svg" />
+    <Content Include="embed.js" />
+    <Content Include="extension.html" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\icons.eot" />
+    <Content Include="fonts\icons.svg" />
+    <Content Include="fonts\icons.ttf" />
+    <Content Include="fonts\icons.woff" />
+    <Content Include="fonts\icons.woff2" />
+    <Content Include="highlight.js\highlight.pack.js" />
+    <Content Include="highlight.js\styles\vs.css" />
+    <Content Include="icons.css" />
+    <Content Include="images\Bars_black.gif" />
+    <Content Include="images\LockScreenLogo.scale-200.png" />
+    <Content Include="images\microbit.bw.svg" />
+    <Content Include="images\newblock.png" />
+    <Content Include="images\newblock2.png" />
+    <Content Include="images\newkodu.png" />
+    <Content Include="images\newtypescript.png" />
+    <Content Include="images\newtypescript2.png" />
+    <Content Include="images\newvisualstudiocode.png" />
+    <Content Include="images\SplashScreen.scale-200.png" />
+    <Content Include="images\Square150x150Logo.scale-200.png" />
+    <Content Include="images\Square44x44Logo.scale-200.png" />
+    <Content Include="images\Square44x44Logo.targetsize-24_altform-unplated.png" />
+    <Content Include="images\StoreLogo.png" />
+    <Content Include="images\Wide310x150Logo.scale-200.png" />
+    <Content Include="images\windowsstorebag.png" />
+    <Content Include="index.html" />
+    <Content Include="jquery.js" />
+    <Content Include="locales\en\strings.json" />
+    <Content Include="locales\en\website.json" />
+    <Content Include="main.js" />
+    <Content Include="marked\LICENSE" />
+    <Content Include="marked\marked.min.js" />
+    <Content Include="monacoworker.js" />
+    <Content Include="pxtapp.js" />
+    <Content Include="pxtblockly.js" />
+    <Content Include="pxtcompiler.js" />
+    <Content Include="pxteditor.js" />
+    <Content Include="pxtembed.js" />
+    <Content Include="pxtlib.js" />
+    <Content Include="pxtrunner.js" />
+    <Content Include="pxtsim.js" />
+    <Content Include="pxtweb.js" />
+    <Content Include="pxtwinrt.js" />
+    <Content Include="pxtworker.js" />
+    <Content Include="release.manifest" />
+    <Content Include="rendertest.html" />
+    <Content Include="rtlblockly.css" />
+    <Content Include="rtlsemantic.css" />
+    <Content Include="run.html" />
+    <Content Include="runnertest.html" />
+    <Content Include="semantic.css" />
+    <Content Include="semantic.js" />
+    <Content Include="sim-strings.json" />
+    <Content Include="sim.css" />
+    <Content Include="sim.js" />
+    <Content Include="sim.manifest" />
+    <Content Include="sim.webmanifest" />
+    <Content Include="siminstructions.html" />
+    <Content Include="simulator.html" />
+    <Content Include="smoothie\smoothie.js" />
+    <Content Include="smoothie\smoothie_compressed.js" />
+    <Content Include="sounds\pop.m4a" />
+    <Content Include="sounds\tutorialnew.m4a" />
+    <Content Include="sounds\tutorialstart.m4a" />
+    <Content Include="target-strings.json" />
+    <Content Include="target.js" />
+    <Content Include="target.json" />
+    <Content Include="targetconfig.json" />
+    <Content Include="targetlight.json" />
+    <Content Include="tdast.js" />
+    <Content Include="tdworker.js" />
+    <Content Include="theme.json" />
+    <Content Include="typescript.js" />
+    <Content Include="vs\base\worker\workerMain.js" />
+    <Content Include="vs\basic-languages\src\bat.js" />
+    <Content Include="vs\basic-languages\src\cpp.js" />
+    <Content Include="vs\editor\contrib\quickOpen\browser\symbol-sprite.svg" />
+    <Content Include="vs\editor\contrib\suggest\browser\media\String_16x.svg" />
+    <Content Include="vs\editor\contrib\suggest\browser\media\String_inverse_16x.svg" />
+    <Content Include="vs\editor\contrib\suggest\browser\String_16x.svg" />
+    <Content Include="vs\editor\contrib\suggest\browser\String_inverse_16x.svg" />
+    <Content Include="vs\editor\editor.main.css" />
+    <Content Include="vs\editor\editor.main.js" />
+    <Content Include="vs\editor\standalone\browser\quickOpen\symbol-sprite.svg" />
+    <Content Include="vs\language\json\jsonMode.js" />
+    <Content Include="vs\language\json\jsonWorker.js" />
+    <Content Include="vs\language\typescript\lib\typescriptServices.js" />
+    <Content Include="vs\language\typescript\src\mode.js" />
+    <Content Include="vs\language\typescript\src\worker.js" />
+    <Content Include="vs\loader.js" />
+    <Content Include="worker.js" />
+    <None Include="DataStreamerConnect_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BlockCode\BlockCode.csproj" />
+    <ProjectReference Include="..\DSConnectAppService\DSConnectAppService.csproj" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\$(WMSJSProjectDirectory)\Microsoft.VisualStudio.$(WMSJSProject).targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Uap.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Uap.targets')" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.jsproj.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.jsproj.targets')" />
+  <!--ItemGroup>
+    <PXTStaticContent Include="$(SolutionDir)PXT\built\packaged\**\*.*" />
+  </ItemGroup>
+  <Target Name="BeforeBuild">
+    <Message Text="Generating TypeScript WinRT typings" Importance="high" />
+    <MSBuild Projects="$(ProjectPath)" Targets="GenerateWinRtTypings" />
+    <Copy SourceFiles="$(ProjectDir)bld\$(PlatformName)\$(ConfigurationName)\winrtrefs\winrtrefs.d.ts" DestinationFolder="$(SolutionDir)WinRTTypes" />
+    <Message Text="Finished generating typings" Importance="high" />
+    <Message Text="Generating PXT static content" Importance="high" />
+    <Exec Command="pxt staticpkg" WorkingDirectory="$(SolutionDir)PXT\" />
+    <Copy SourceFiles="@(PXTStaticContent)" DestinationFolder="$(ProjectDir)%(PXTStaticContent.RecursiveDir)" SkipUnchangedFiles="true" OverwriteReadOnlyFiles="true" Retries="3" RetryDelayMilliseconds="300" />
+    <Message Text="Finished generating static content" Importance="high" />
+  </Target-->
+  <!-- To modify your build process, add your task inside one of the targets below then uncomment
+       that target and the DisableFastUpToDateCheck PropertyGroup. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  <PropertyGroup>
+    <DisableFastUpToDateCheck>true</DisableFastUpToDateCheck>
+  </PropertyGroup>
+  -->
+</Project>

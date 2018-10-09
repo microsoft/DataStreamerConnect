@@ -1,0 +1,79 @@
+{
+  "id": "DataStreamerConnect",
+  "name": "Microsoft Data Streamer Connect",
+  "title": "Microsoft Data Streamer Connect",
+  "corepkg": "core",
+  "cloud": {
+    "workspace": false,
+    "packages": false,
+    "sharing": false,
+    "publishing": false,
+    "githubPackages": false
+  },
+  "runtime": {
+    "mathBlocks": true,
+    "loopsBlocks": true,
+    "logicBlocks": true,
+    "variablesBlocks": true,
+    "textBlocks": true,
+    "functionBlocks": true,
+    "listsBlocks": true,
+    "onStartColor": "#008272"
+  },
+  "simulator": {
+    "autoRun": true,
+    "headless": true,
+    "hideFullscreen": false
+  },
+  "versions": {
+    "target": "1.0.0",
+    "pxt": "3.22.18"
+  },
+  "blocksprj": {
+    "id": "blocksprj",
+    "config": {
+      "name": "{0}",
+      "dependencies": {
+        "core": "*"
+      },
+      "description": "",
+      "files": [
+        "main.blocks",
+        "main.ts",
+        "README.md"
+      ],
+      "additionalFilePaths": []
+    },
+    "files": {
+      "main.blocks": "<xml xmlns=\"http://www.w3.org/1999/xhtml\">\n</xml>",
+      "main.ts": " ",
+      "README.md": " "
+    }
+  },
+  "tsprj": {
+    "id": "tsprj",
+    "config": {
+      "name": "{0}",
+      "dependencies": {
+        "core": "*"
+      },
+      "description": "",
+      "files": [
+        "main.ts",
+        "README.md"
+      ],
+      "additionalFilePaths": []
+    },
+    "files": {
+      "main.ts": " ",
+      "README.md": " "
+    }
+  },
+  "compile": {
+    "isNative": false,
+    "hasHex": false,
+    "floatingPoint": true,
+    "vtableShift": 2,
+    "noSourceInFlash": true
+  }
+}

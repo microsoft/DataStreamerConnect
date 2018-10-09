@@ -1,0 +1,12 @@
+{
+    "packages": {
+        "approvedOrgs": [
+        ],
+        "approvedRepos": [
+        ]
+    },
+    "galleries": {
+        "Examples": "examples",
+        "Tutorials": "tutorials"
+    }
+}

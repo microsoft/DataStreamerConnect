@@ -1,0 +1,24 @@
+﻿<!doctype html>
+<html lang="en" manifest="./release.manifest" data-framework="typescript">
+
+<head>
+    <meta charset="utf-8">
+    <title>sample simulator</title>
+    <link rel="stylesheet" type="text/css" href="./sim.css">
+    <style>
+        body {
+            background: transparent;
+            overflow: hidden;
+        }
+    </style>
+    <script src="./bluebird.min.js"></script>
+    <script src="./pxtsim.js"></script>
+    <script src="./sim.js"></script>
+</head>
+
+<body>
+    <svg id='svgcanvas' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 280">
+        <circle id='svgsprite' cx="100" cy="100" r="50" class="sprite" />
+        <circle id='svgsprite2' cx="50" cy="50" r="25" class="sprite" />
+    </svg>
+</body>
