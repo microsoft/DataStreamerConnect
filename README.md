@@ -21,7 +21,7 @@ To setup your development machine you will need to install:
 Data Streamer Connect is built using Microsoft MakeCode. To update the instance you will need to:
 
 1. Clone this repository
-    * You should create your own branch to contain the changes
+    * You should create your own branch to contain any changes
 2. Open DataStreamerConnect.sln and build the project (either x86 or x64)
 3. Install [Node.js](https://nodejs.org/dist/v8.12.0/node-v8.12.0-x64.msi)
     * Ensure that Node.js is added to the path
@@ -43,9 +43,11 @@ Data Streamer Connect is built using Microsoft MakeCode. To update the instance 
     * npm install -g pxt
     * npm install
 9. Build the static package that Data Streamer Connect uses by running "pxt staticpkg" in the terminal window
-    * The first pass will generate a number of "Skipped data-uri" warning. These can be ignored.
+    * The first pass will generate a number of "Skipped data-uri" warning. These can be ignored
 10. Copy the files from PXT\built\packaged **except** for index.html into the DataStreamerConnect\DataStreamerConnect (this is the root folder of the UWP JavaScript application)
-11. Build the DataStreamerConnect solution
+11. Build the DataStreamerConnect solution or create a Microsoft Store package
+    * Only x86 and x64 packages are supported
+    * To install the created packages run "Add-AppDevPackage.ps1" with PowerShell and follow the prompts
 
 
 # Streaming data to Microsoft Excel
