@@ -33,6 +33,7 @@ Data Streamer Connect is built using Microsoft MakeCode. To update the instance 
         * package.json
         * pxtarget.json
         * targetconfig.json
+        * docs/static/hero.png
         * libs/core/ns.ts
         * sim/api.ts
         * sim/apiwinrt.ts
