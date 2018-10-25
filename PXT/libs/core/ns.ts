@@ -10,8 +10,3 @@ namespace Arduino {
 //% color=#217346 icon="\uf0ce"
 namespace Excel {
 }
-
-// General block annotations
-//% color=#D4BC00 icon="\uf03e"
-namespace sprites {
-}
