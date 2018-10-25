@@ -5,7 +5,7 @@ Data Streamer Connect is an Open Source Project and Sample that demonstrates the
 2. Adding Blocks and JavaScript for the Arudino UNO using the [Windows Provider Model](https://github.com/ms-iot/BusProviders/tree/develop/Arduino) and [RemoteArduino](https://github.com/ms-iot/remote-wiring/blob/develop/README.md) built on the [Firmata Protocol](http://firmata.org/wiki/Main_Page)
 3. Adding a [Windows AppService](https://docs.microsoft.com/en-us/windows/uwp/launch-resume/how-to-create-and-consume-an-app-service) to a MakeCode UWP App to communicate with the [Microsoft Hacking STEM Data Streamer Excel Plugin](https://www.microsoft.com/en-us/download/details.aspx?id=56976)
 4. Adding example Blocks and JavaScript to communicate with Windows 10 platform API
-5. Upgrade Arudino Uno firmware programatticaly with a pre-defined hex program
+5. Upgrade Arudino Uno firmware programmatically with a pre-defined hex program
 
 # Setting up the development environment
 
