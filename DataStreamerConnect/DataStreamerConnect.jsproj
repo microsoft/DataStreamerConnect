@@ -203,6 +203,7 @@
     <Content Include="vs\editor\contrib\suggest\browser\String_inverse_16x.svg" />
     <Content Include="vs\editor\editor.main.css" />
     <Content Include="vs\editor\editor.main.js" />
+    <Content Include="vs\editor\editor.main.nls.js" />
     <Content Include="vs\editor\standalone\browser\quickOpen\symbol-sprite.svg" />
     <Content Include="vs\language\json\jsonMode.js" />
     <Content Include="vs\language\json\jsonWorker.js" />
