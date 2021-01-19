@@ -1,3 +1,5 @@
+# Note: This repo is now archived. It is still available READ ONLY for forking or historical interest.
+
 # Description
 Data Streamer Connect is an Open Source Project and Sample that demonstrates the following:
 
